@@ -8,9 +8,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -20,6 +20,7 @@ header {
 }
 
 header .btn-cart {
+  position: relative;
   max-width: 175px;
   max-height: 55px;
   font-size: 28px;
@@ -38,11 +39,6 @@ header .btn-cart:hover {
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   max-width: 100%;
   background-color: #eafaf9;
 }
@@ -109,6 +105,12 @@ main .products .product-item p {
 }
 
 main .products .product-item .buy-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 22px;
   font-weight: 400;
   background-color: rgba(212, 16, 16, 0.74);
@@ -118,5 +120,97 @@ main .products .product-item .buy-btn {
 main .products .product-item .buy-btn:hover {
   -webkit-box-shadow: inset 0 0 7px 3px #33f5cb;
           box-shadow: inset 0 0 7px 3px #33f5cb;
+}
+
+main .products .product-item .add-btn,
+main .products .product-item .remove-btn {
+  width: 35%;
+}
+
+main .products .product-item .product-quantity {
+  width: 20px;
+}
+
+.cart {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 6%;
+  right: 6%;
+  max-width: 380px;
+}
+
+.cart .product-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+  background-color: #04e499;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.cart img {
+  max-width: 50px;
+}
+
+.cart .product-name {
+  margin: 0 5px;
+}
+
+.cart .price {
+  color: #f50b0b;
+}
+
+.cart .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart .delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  font-weight: bold;
+  border-top-right-radius: 10px;
+}
+
+.cart .delete-btn:hover {
+  color: #eafaf9;
+}
+
+.cart .add-btn,
+.cart .remove-btn {
+  width: 14%;
+  height: 14%;
+  font-size: 25px;
+}
+
+.cart .add-btn:hover,
+.cart .remove-btn:hover {
+  background-color: rosybrown;
+}
+
+.invisible {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
