@@ -7,19 +7,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
+        <form action="#" class="search-form">
+            <input type="text" class="search-field">
+            <button class="btn-search" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+        <buttton class="feedback-btn">Обратная связь</buttton>
         <button class="btn-cart" type="button">Корзина</button>
+
     </header>
     <main>
         <div class="products"></div>
         <div class="cart invisible"></div>
-    </main>
+        <div class="feedback invisible">
+            <form action="submit" class="feedback-form">
+                <p>Name<input type="text" class="name" value="Name"></p>
+                <p>Phone<input type="number" class="phone" value="+7(000)000-0000"> </p>
+                <p>E-mail<input type="email" class="E-mail" value="yourmail@addr.com"></p>
+                <p>Your message<textarea name="textarea" id="333" cols="53" rows="5"></textarea></p>
+                <div class="form-btn"><button type="submit">Отправить</button></div>
 
+            </form>
+        </div>
+    </main>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    <script src="js/feedback.js"></script>
 </body>
 
 </html>

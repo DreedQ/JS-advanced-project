@@ -19,6 +19,20 @@ header {
   min-height: 66px;
 }
 
+header .feedback-btn {
+  max-width: 175px;
+  max-height: 55px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+header .feedback-btn:hover {
+  -webkit-box-shadow: 0 0 5px 3px #33f5cb;
+          box-shadow: 0 0 5px 3px #33f5cb;
+}
+
 header .btn-cart {
   position: relative;
   max-width: 175px;
@@ -36,6 +50,24 @@ header .btn-cart {
 header .btn-cart:hover {
   -webkit-box-shadow: 0 0 10px 3px #33f5cb;
           box-shadow: 0 0 10px 3px #33f5cb;
+}
+
+header .search-form {
+  background-color: #eafaf9;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+header .search-field {
+  border-width: 0px;
+  background-color: #eafaf9;
+}
+
+header .btn-search {
+  margin-left: 0;
+  padding-left: 0;
+  background-color: #eafaf9;
+  border: none;
 }
 
 main {
@@ -96,8 +128,8 @@ main .products .product-item img {
 }
 
 main .products .product-item p {
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 25px;
+  font-weight: 500;
   position: absolute;
   bottom: 38px;
   right: 15px;
@@ -142,10 +174,10 @@ main .products .product-item .product-quantity {
           flex-direction: column;
   top: 6%;
   right: 6%;
-  max-width: 380px;
+  width: 380px;
 }
 
-.cart .product-item {
+.cart .cart-item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,21 +203,15 @@ main .products .product-item .product-quantity {
   max-width: 50px;
 }
 
-.cart .product-name {
+.cart .product-desc {
   margin: 0 5px;
 }
 
-.cart .price {
+.cart .product-quantity {
   color: #f50b0b;
 }
 
-.cart .quantity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cart .delete-btn {
+.cart .del-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -194,7 +220,7 @@ main .products .product-item .product-quantity {
   border-top-right-radius: 10px;
 }
 
-.cart .delete-btn:hover {
+.cart .del-btn:hover {
   color: #eafaf9;
 }
 
@@ -208,6 +234,64 @@ main .products .product-item .product-quantity {
 .cart .add-btn:hover,
 .cart .remove-btn:hover {
   background-color: rosybrown;
+}
+
+.feedback {
+  position: absolute;
+  top: 100px;
+  left: 30%;
+  width: 550px;
+  -webkit-box-shadow: 0 0 10px 3px #000;
+          box-shadow: 0 0 10px 3px #000;
+  background-color: rgba(133, 249, 253, 0.801);
+}
+
+.feedback form {
+  font-size: 25px;
+  margin: 25px 0;
+}
+
+.feedback form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 15px;
+}
+
+.feedback form input {
+  width: 350px;
+  font-size: 18px;
+}
+
+.feedback form textarea {
+  width: 350px;
+}
+
+.feedback form .form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+.feedback form .form-btn button {
+  cursor: pointer;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .invisible {
