@@ -35,7 +35,7 @@ header {
         border-width: 0px;
         background-color: rgb(234, 250, 249);
         font-size: 18px;
-        outline-color: rgb(234, 250, 249);
+        // outline-color: rgb(234, 250, 249);
     }
     .btn-search {
         margin-left: 0;
@@ -71,7 +71,7 @@ header {
             display: flex;
             justify-content: start;
             align-items: center;
-            width: 300px;
+            width: 370px;
             padding: 10px 15px;
             box-shadow: 0 0 10px #000;
             background-color: rgb(4, 228, 153);
@@ -83,6 +83,29 @@ header {
             img {
                 max-width: 50px;
             }
+        }
+        .product-bio {
+            padding: 0 10px;
+        }
+        .right-block {
+            padding: 0 10px;
+        }
+        .del-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 20px;
+            width: 25px;
+            height: 25px;
+            border-top-right-radius: 10px;
+            background-color: rgb(250, 45, 45);
+        }
+        .buy-btn {
+            font-size: 16px;
+            font-weight: 400;
+            background-color: rgba(212, 16, 16, 0.74);
+            cursor: pointer;
         }
     }
     .invisible {
@@ -152,6 +175,15 @@ main {
                 }
             }
         }
+    }
+    .err-el {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: rgb(250, 45, 45);
+        height: 450px;
+        width: 450px;
     }
 }
 

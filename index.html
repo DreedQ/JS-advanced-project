@@ -17,70 +17,28 @@
         <header>
             <div class="logo">E-shop</div>
             <div class="cart">
-                <form action="#" class="search-form" @submit.prevent="filter(filterValue)">
-                    <input type="text" class="search-field" v-model="filterValue">
-                    <button class="btn-search" type="submit">
-                        <i class="fas fa-search" ></i>
-                    </button>
-                </form>
+                <filters></filters>
+
                 <button class="btn-cart" type="button" @click='isVisibleCart = !isVisibleCart'>Корзина</button>
-                <div class="cart-block" v-if='isVisibleCart'>
-                    <p v-if="!cartItems.length">Cart is empty</p>
-                    <div class="cart-item" v-for="product of cartItems" :key="product.id_product">
-                        <img :src="imgCatalog" alt="Some img">
-                        <div class="desc">
-                            <h3>{{product.product_name}}</h3>
-                            <p>Цена: {{product.price}} $</p>
-                            <p>Количество: {{ product.quantity }}</p>
-                            <dvi class="desc-price">Стоимость: {{product.price * product.quantity }}</dvi>
-                            <button class="buy-btn" @click="addProduct(product)">Купить</button>
-                            <button class="del-btn" @click="removeProduct(product)">X</button>
-                        </div>
-                    </div>
-                </div>
+
+                <cart :cart-items="cartItems" :img="imgCart" :visibility="isVisibleCart" @remove="removeProduct" @add-product="addProduct"></cart>
 
             </div>
         </header>
         <main>
-            <div class="products">
-                <div class="product-item" v-for="product of filtered" :key="product.id_product">
-                    <img :src="imgCatalog" alt="Some img">
-                    <div class="desc">
-                        <h3>{{product.product_name}}</h3>
-                        <p>{{product.price}} $</p>
-                        <button class="buy-btn" @click="addProduct(product)">Купить</button>
-                    </div>
-                </div>
-            </div>
+            <err :visibility="errorData"></err>
+
+            <products :products="filtered" :img="imgProduct" @add-product="addProduct"></products>
         </main>
     </div>
-    <!-- <header>
-        <form action="#" class="search-form">
-            <input type="text" class="search-field">
-            <button class="btn-search" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-        <buttton class="feedback-btn">Обратная связь</buttton>
-        <button class="btn-cart" type="button">Корзина</button>
 
-    </header>
-    <main>
-        <div class="products"></div>
-        <div class="cart invisible"></div>
-        <div class="feedback invisible">
-            <form action="submit" class="feedback-form">
-                <p>Name<input type="text" class="name" value="Name"></p>
-                <p>Phone<input type="number" class="phone" value="+7(000)000-0000"> </p>
-                <p>E-mail<input type="email" class="E-mail" value="yourmail@addr.com"></p>
-                <p>Your message<textarea name="textarea" id="333" cols="53" rows="5"></textarea></p>
-                <div class="form-btn"><button type="submit">Отправить</button></div>
-
-            </form>
-        </div> -->
     </main>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="Components/CartComponent.js"></script>
+    <script src="Components/ProductComponent.js"></script>
+    <script src="Components/FilterComponent.js"></script>
+    <script src="Components/ErrorComponent.js"></script>
     <script src="js/main.js"></script>
 </body>
 
