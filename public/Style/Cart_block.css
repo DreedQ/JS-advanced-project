@@ -1,0 +1,111 @@
+.cart__icon {
+  background-color: inherit;
+}
+
+.btn-cart {
+  background-color: inherit;
+}
+
+.cart-block {
+  position: absolute;
+  top: 95px;
+  right: 25px;
+  width: 350px;
+  z-index: 5;
+}
+
+.cart-item {
+  width: 350px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-shadow: 0 0 2px #000;
+          box-shadow: 0 0 2px #000;
+  margin-bottom: 3px;
+  background: #F8F8F8;
+}
+
+.cart-item .product-bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-item .product-bio img {
+  width: auto;
+  max-height: 120px;
+}
+
+.cart-item .product-bio .product-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 5px;
+  height: 100%;
+}
+
+.cart-item .product-bio .product-desc .product-title {
+  font-weight: bold;
+}
+
+.cart-item .product-bio .product-desc .product-single-price {
+  color: #F16D7F;
+}
+
+.cart-item .right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cart-item .right-block .product-price {
+  color: #F16D7F;
+  font-weight: bold;
+}
+
+.cart-item .right-block .cart__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-item .right-block .cart__btns .del-btn,
+.cart-item .right-block .cart__btns .add-btn {
+  width: 35px;
+  height: 35px;
+  background-color: #F16D7F;
+  margin: 0 5px;
+}
+
+.cart-item:hover {
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+/*# sourceMappingURL=Cart_block.css.map */

@@ -1,0 +1,34 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 8,
+            "id_product": 123,
+            "product_name": "4T2 Pnants",
+            "price": 5600,
+            "imgProduct": "./images/Product_3.png"
+        },
+        {
+            "quantity": 6,
+            "id_product": 457,
+            "product_name": "Sveater Goodi",
+            "price": 3000,
+            "imgProduct": "./images/Product_2.png"
+        },
+        {
+            "quantity": 10,
+            "id_product": 453,
+            "product_name": "Striped Suit",
+            "price": 4500,
+            "imgProduct": "./images/Product_5.png"
+        },
+        {
+            "quantity": 8,
+            "id_product": 486,
+            "product_name": "Jaket Beard",
+            "price": 12000,
+            "imgProduct": "./images/486.png"
+        }
+    ]
+}
