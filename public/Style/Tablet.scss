@@ -1,0 +1,98 @@
+@media(max-width:1095px) {
+    .offer__inner {
+        padding: 0 16px;
+        box-sizing: border-box;
+        .offer__card {
+            width: 32%;
+        }
+    }
+    .item {
+        .item__shell__inner {
+            justify-content: space-evenly;
+        }
+    }
+    .footer {
+        .footer___bottom {
+            p {
+                margin-left: 32px;
+            }
+            .footer__icon__box {
+                margin-right: 32px;
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    // .container {
+    //     max-width: 768px;
+    //     padding: 0 16px;
+    //     box-sizing: border-box;
+    // }
+    .header {
+        .nav__wrap {
+            padding: 19px 32px 17px 32px;
+            box-sizing: border-box;
+        }
+    }
+    .nav__right {
+        .nav__menu {
+            max-height: 100vh;
+        }
+    }
+    .intro {
+        .intro__wrap {
+            height: 367px;
+            background-position: 10px 0;
+            background-size: contain;
+            .intro__text {
+                max-width: 311px;
+                margin-right: 34px;
+            }
+            h1 {
+                font-size: 24px;
+                .bold__text {
+                    font-size: 44px;
+                }
+            }
+        }
+    }
+    .item__shell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 768px;
+        width: 100%;
+        .item__shell__inner {
+            justify-content: space-around;
+            max-width: 768pxx;
+            width: 100%;
+        }
+    }
+    .outro__container {
+        display: flex;
+        flex-direction: column;
+        .outro__block {
+            margin-top: 50px;
+        }
+        .outro__block:last-child {
+            margin-bottom: 64px;
+        }
+    }
+    .subscribe {
+        height: 614px;
+        .cover__layer {
+            height: 614px
+        }
+        .subscribe__inner {
+            display: flex;
+            flex-direction: column;
+            .subscribe__info {
+                margin: 64px 0 48px 0;
+            }
+            .subscribe__block {
+                margin-bottom: 140px;
+            }
+        }
+    }
+}
