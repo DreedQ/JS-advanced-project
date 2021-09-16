@@ -555,6 +555,21 @@ body {
   color: crimson;
 }
 
+.header .search-form .search-field {
+  font-size: 18px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.header .search-form .btn-search {
+  background-color: inherit;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
 .intro {
   max-width: 100%;
   background: #F1E4E6;
@@ -955,7 +970,7 @@ body {
 
 .subscribe {
   height: 448px;
-  background-image: url(/public/images/Sub_background.jpg);
+  background-image: url(../images/Sub_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

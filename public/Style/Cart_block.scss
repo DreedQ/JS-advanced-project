@@ -27,15 +27,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        img {
-            width: auto;
-            max-height: 120px;
+        .img__container {
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: auto;
+                max-height: 120px;
+            }
         }
         .product-desc {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            margin: 0 5px;
+            margin: 0 8px;
             height: 100%;
             .product-title {
                 font-weight: bold;

@@ -1,10 +1,9 @@
-// const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-
 Vue.component('cart', {
     data() {
         return {
             cartUrl: '/getBasket.json',
             cartItems: [],
+            cartCount: [],
             showCart: false
         }
     },
@@ -16,6 +15,8 @@ Vue.component('cart', {
                     this.$data.cartItems.push(item);
                 }
             });
+
+        // console.log(this.cartProps);
     },
     methods: {
         addProduct(item) {
@@ -24,7 +25,8 @@ Vue.component('cart', {
                 this.$parent.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
                     .then(data => {
                         if (data.result === 1) {
-                            find.quantity++
+                            find.quantity++;
+                            this.calcCounts()
                         }
                     })
             } else {
@@ -34,38 +36,36 @@ Vue.component('cart', {
                         if (data.result === 1) {
                             prod.imgCart = `./images/${prod.id_product}.png`
                             this.cartItems.push(prod)
+                            this.calcCounts()
                         }
+
                     })
             }
-
-            // this.$parent.getJson(`${API}/addToBasket.json`)
-            //     .then(data => {
-            //         if(data.result === 1){
-            //             let find = this.cartItems.find(el => el.id_product === item.id_product);
-            //             if(find){
-            //                 find.quantity++;
-            //             } else {
-            //                 const prod = Object.assign({quantity: 1}, item);
-            //                 this.cartItems.push(prod)
-            //             }
-            //         }
-            //     })
         },
         remove(item) {
-            this.$parent.getJson(`${API}/addToBasket.json`)
+            this.$parent.putJson(`/api/cart/${item.id_product}`, { quantity: -1 })
                 .then(data => {
                     if (data.result === 1) {
-
                         if (item.quantity > 1) {
-
-                            item.quantity--;
-
+                            item.quantity--
+                                this.calcCounts()
                         } else {
+                            this.$parent.delJson(`/api/cart/${item.id_product}`, item);
                             this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                            this.calcCounts()
                         }
                     }
                 })
         },
+        calcCounts() {
+            let amount = 0;
+            let countGoods = 0;
+            for (item of this.$data.cartItems) {
+                countGoods += +item.quantity;
+                amount += item.price * item.quantity;
+            }
+            this.$data.cartCount = { "amount": amount, "countGoods": countGoods };
+        }
     },
     template: `<div class="cart__icon">
 <button class="btn-cart" type="button" @click="showCart = !showCart"><a href="#"><img src="images/chart.svg" alt="Chart" /></a></button>
@@ -82,7 +82,7 @@ Vue.component('cart-item', {
     template: `
     <div class="cart-item">
                     <div class="product-bio">
-                        <img :src="img" alt="Some img">
+                    <div class="img__container"><img :src="img" alt="Some img"></div>
                         <div class="product-desc">
                             <div class="product-title">{{ cartItem.product_name }}</div>
                             <div class="product-quantity">Количестко: {{ cartItem.quantity }}</div>
