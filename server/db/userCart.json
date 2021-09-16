@@ -1,0 +1,27 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 3,
+            "id_product": 123,
+            "product_name": "4T2 Pnants",
+            "price": 5600,
+            "imgProduct": "./images/123.png"
+        },
+        {
+            "quantity": 2,
+            "id_product": 453,
+            "product_name": "Striped Suit",
+            "price": 4500,
+            "imgProduct": "./images/453.png"
+        },
+        {
+            "quantity": 1,
+            "id_product": 457,
+            "product_name": "Sveater Goodi",
+            "price": 3000,
+            "imgProduct": "./images/457.png"
+        }
+    ]
+}

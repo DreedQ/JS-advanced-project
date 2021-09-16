@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="./Style/Main_style.css">
+    <link rel="stylesheet" href="./Style/Style.css">
+    <link rel="stylesheet" href="./Style/Cart_block.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+    <div id="app">
+        <header class="header" id="app">
+            <div class="container nav__wrap">
+                <nav class="nav__left">
+                    <ul class="nav__box">
+                        <li class="nav__icon">
+                            <a href="#"><img src="images/logo.svg" alt="Logo" /></a>
+                        </li>
+                        <li class="nav__icon">
+                            <filter-el></filter-el>
+                            <!-- <a href="#"><img src="images/seek.svg" alt="Seek" /></a> -->
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="nav__right">
+                    <ul class="nav__box">
+                        <li class="nav__icon">
+                            <input type="checkbox" name="menu" id="menu">
+                            <label class="nav__check" for="menu">&#9776</label>
+                            <div class="nav__menu">
+                                <div class="nav__wrapper">
+                                    <label class="nav__closer" for="menu">&#128937;</label>
+                                    <h2>MENU</h3>
+                                        <h3>MAN</h3>
+                                        <ul class="nav__list">
+                                            <li class="nav_link">Accessories</li>
+                                            <li class="nav_link">Bags</li>
+                                            <li class="nav_link">Denim</li>
+                                            <li class="nav_link">T-Shirts</li>
+                                        </ul>
+                                        <h3>WOMAN</h3>
+                                        <ul class="nav__list">
+                                            <li class="nav_link">Accessories</li>
+                                            <li class="nav_link">Jackets & Coats</li>
+                                            <li class="nav_link">Polos</li>
+                                            <li class="nav_link">T-Shirts</li>
+                                            <li class="nav_link">Shirts</li>
+                                        </ul>
+                                        <h3>KIDS</h3>
+                                        <ul class="nav__list">
+                                            <li class="nav_link">Accessories</li>
+                                            <li class="nav_link">Jackets & Coats</li>
+                                            <li class="nav_link">Polos</li>
+                                            <li class="nav_link">T-Shirts</li>
+                                            <li class="nav_link">Shirts</li>
+                                            <li class="nav_link">Bags</li>
+                                        </ul>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="nav__icon phone__hide">
+                            <a href="#"><img src="images/user.svg" alt="Cabinet" /></a>
+                        </li>
+                        <li class="nav__icon phone__hide">
+                            <cart ref="cart"></cart>
+                            <!-- <a href="Cart.html"><img src="images/chart.svg" alt="Chart" /></a> -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="intro">
+            <div class="container intro__wrap">
+                <div class="intro__text">
+                    <h1>
+                        <span class="bold__text">THE BRAND<br></span> OF
+                        <span class="colorized__text">Lyxery FASHION</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section class="offer">
+            <div class="container offer__inner">
+                <div class="offer__card">
+                    <img src="images/Offer_pic1.png" alt="Picutre" />
+                    <div class="dark__layer">
+                        <h3 class="offer__header">
+                            30% OFF<br /><span class="colorized__text">FOR WOMAN</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="offer__card">
+                    <img src="images/Offer_pic2.png" alt="Picutre " />
+                    <div class="dark__layer">
+                        <h3 class="offer__header">
+                            HOT DEAL<br /><span class="colorized__text">FOR MAN ONLY</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="offer__card">
+                    <img src="images/Offer_pic3.png" alt="Picutre " />
+                    <div class="dark__layer">
+                        <h3 class="offer__header">
+                            NEW ARRIVAL<br /><span class="colorized__text">FOR KIDS</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="offer__card">
+                    <img src="images/Offer_pic4.png" alt="Picutre " />
+                    <div class="dark__layer__max">
+                        <h3 class="offer__header">LUXIROUS & TRENDY<br />
+                            <span class="colorized__text">ACCESORIES</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main class="item">
+            <div class="container item__shell ">
+                <h2 class="item__header">Fetured Items</h2>
+                <h4 class="item__text">
+                    Shop for items based on what we featured in this week
+                </h4>
+
+                <error ref="error"></error>
+                <products ref="products"></products>
+
+                <div class="item__btn">
+                    <a class="item__btn__anchor" href="catalog.html">Browse All Product</a>
+                </div>
+            </div>
+        </main>
+        <div class="outro">
+            <div class="container outro__container">
+                <div class="outro__block">
+                    <div class="outro__img">
+                        <img src="images/Delivery_pic.svg" alt="Picture" />
+                    </div>
+
+                    <h4>Free Delivery</h4>
+                    <p class="outro__paragraph">
+                        Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    </p>
+                </div>
+                <div class="outro__block">
+                    <div class="outro__img">
+                        <img src="images/sell.svg" alt="Picture" />
+                    </div>
+
+                    <h4>Sales & discounts</h4>
+                    <p class="outro__paragraph">
+                        Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    </p>
+                </div>
+                <div class="outro__block">
+                    <div class="outro__img">
+                        <img src="images/crown.svg" alt="Picture" />
+                    </div>
+
+                    <h4>Quality assurance</h4>
+                    <p class="outro__paragraph">
+                        Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <section class="subscribe">
+                <div class="cover__layer">
+                    <div class="container subscribe__inner">
+                        <div class="subscribe__info">
+                            <div class="subscribe__pic">
+                                <img src="images/Intersect.png" alt="Picture" />
+                            </div>
+                            <p class="subscribe__info__text">
+                                “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+                            </p>
+                        </div>
+                        <div class="subscribe__block">
+                            <h3>SUBSCRIBE</h3>
+                            <p class="subscribe__block__text">
+                                FOR OUR NEWLETTER AND PROMOTION
+                            </p>
+                            <form action="#" class="submit">
+                                <input placeholder="Enter Your Email" type="email" class="submit__email" pattern="[A-Za-z0-9_-.]{3,}@[a-z]{3,}.[a-z]{2,}" />
+                                <input type="submit" value="Subscribe" class="submit__btn" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="footer">
+                <div class="container footer___bottom">
+                    <p class="rights">© 2021 Brand All Rights Reserved.</p>
+
+                    <div class="footer__icon__box">
+                        <div class="footer__icon">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+
+                        <div class="footer__icon">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+
+                        <div class="footer__icon">
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+
+                        <div class="footer__icon">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <!-- <script src="js/ProductComponent.js"></script> -->
+    <!-- <script src="js/CartComponent.js"></script> -->
+    <!-- <script src="js/FilterComp.js"></script> -->
+    <!-- <script src="js/ErrorComp.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+    <script defer="defer" src="/dist/index_bundle.js"></script>
+</body>
+
+</html>

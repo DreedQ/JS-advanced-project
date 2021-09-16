@@ -1,0 +1,115 @@
+@media(max-width:375px) {
+    .container {
+        max-width: 768px;
+        padding: unset;
+    }
+    .nav__left {
+        margin-left: 16px;
+    }
+    .nav__right {
+        margin-right: 16px;
+        .nav__box {
+            .phone__hide {
+                display: none;
+            }
+        }
+        .nav__menu {
+            max-height: 100vh;
+        }
+    }
+    .intro {
+        .intro__wrap {
+            background: none;
+            justify-content: center;
+            .intro__text {
+                max-width: 311px;
+                margin-right: 34px;
+            }
+            h1 {
+                font-size: 20px;
+                line-height: 20px;
+                .bold__text {
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+    .offer__inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        .offer__card {
+            max-width: 360px;
+            width: 100%;
+        }
+        .offer__card:last-child {
+            height: 111px;
+            width: 360px;
+            img {
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+    }
+    .item__shell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .item {
+        .item__shell__inner {
+            justify-content: center;
+        }
+        .item__shell__inner {
+            justify-content: center;
+        }
+        .item__inner {
+            width: 100%;
+        }
+    }
+    .outro__container {
+        display: flex;
+        flex-direction: column;
+        .outro__block {
+            margin-top: 50px;
+        }
+        .outro__block:last-child {
+            margin-bottom: 64px;
+        }
+    }
+    .subscribe {
+        background-position-x: -500px;
+        height: 614px;
+        .cover__layer {
+            height: 614px
+        }
+        .subscribe__inner {
+            display: flex;
+            flex-direction: column;
+            .subscribe__info {
+                margin: 64px 0 48px 0;
+            }
+            .subscribe__block {
+                margin-bottom: 140px;
+            }
+        }
+        .subscribe__block__text {
+            font-size: 14px;
+        }
+    }
+    .footer {
+        height: 143px;
+        .footer___bottom {
+            flex-flow: column-reverse;
+            justify-content: center;
+        }
+        .footer__icon__box {
+            margin: 40px;
+        }
+        .rights {
+            margin-bottom: 10px;
+        }
+    }
+}

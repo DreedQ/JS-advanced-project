@@ -1,0 +1,31 @@
+[{
+        "id_product": 124,
+        "product_name": "Kavalli Dress",
+        "price": 16000
+    },
+    {
+        "id_product": 457,
+        "product_name": "Sveater Goodi",
+        "price": 3000
+    },
+    {
+        "id_product": 123,
+        "product_name": "4T2 Pnants",
+        "price": 5600
+    },
+    {
+        "id_product": 416,
+        "product_name": "Blue Jaket",
+        "price": 7000
+    },
+    {
+        "id_product": 453,
+        "product_name": "Striped Suit",
+        "price": 4500
+    },
+    {
+        "id_product": 486,
+        "product_name": "Jaket Beard",
+        "price": 12000
+    }
+]
